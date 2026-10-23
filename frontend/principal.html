@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Vinyl Control</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logo">
+      <div class="disco-icone"></div>
+      <h1>Vinyl Control</h1>
+    </div>
+    <div class="usuario">
+      <span>Olá, <strong id="nomeUsuario"></strong></span>
+      <button class="btn btn-secundario btn-pequeno" id="btnSair">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="titulo-pagina"><h2>Painel principal</h2></div>
+
+    <section class="resumo">
+      <div class="item"><span>Títulos cadastrados</span><strong id="totalDiscos">-</strong></div>
+      <div class="item"><span>Discos em estoque</span><strong id="totalUnidades">-</strong></div>
+      <div class="item"><span>Abaixo do mínimo</span><strong id="totalBaixo" class="estoque-baixo">-</strong></div>
+    </section>
+
+    <nav class="menu-cards">
+      <a href="cadastro.html" class="menu-card" id="linkCadastro">
+        <h3>Cadastro de Disco</h3>
+        <p>Cadastrar, buscar, editar e excluir discos do acervo.</p>
+      </a>
+      <a href="gestao.html" class="menu-card" id="linkGestao">
+        <h3>Gestão de Acervo e Vendas</h3>
+        <p>Registrar vendas (saídas) e reposições (entradas) de estoque.</p>
+      </a>
+    </nav>
+
+    <section class="card" style="margin-top:22px">
+      <h3 style="margin-bottom:12px">Movimentações recentes</h3>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Disco</th><th>Tipo</th><th>Qtd.</th><th>Usuário</th></tr>
+          </thead>
+          <tbody id="tabelaRecentes">
+            <tr><td colspan="5" class="vazio">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/sessao.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>
